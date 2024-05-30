@@ -1,0 +1,127 @@
+@model List<ebook_cw.Models.Order>
+@using System.Globalization
+@{
+    ViewData["Title"] = "My Orders";
+    Layout = "~/Views/Shared/Front/_Layout.cshtml";
+    Thread.CurrentThread.CurrentCulture = new CultureInfo("lk-LK");
+}
+<style>
+    .cart__btn__list li a {
+        background: #839db6 none repeat scroll 0 0;
+    }
+
+    .mainmenu__nav .meninmenu li a {
+        color: #000;
+    }
+
+    .blureffect {
+        /* Add the blur effect */
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+    }
+
+    .section-padding--lg {
+        padding: 40px 0 80px 0;
+    }
+</style>
+
+<div class="ht__bradcaump__area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner">
+                    <h2 class="bradcaump-title">My Orders</h2>
+                </div>
+                <hr style="margin-top:10px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cart-main-area section-padding--lg bg--white mt--10">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section__title--3 text-center pb--30">
+                    <h2>My Orders</h2>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <div class="table-content wnro__table table-responsive" style="overflow-x: unset;">
+                    <table class="" style="height: 100%;">
+                        <thead>
+                            <tr class="title-top">
+                                <th class="product-quantity">Order ID</th>
+                                <th class="product-name">Items</th>
+                                <th class="product-price">Total</th>
+                                <th class="product-subtotal">View Order</th>
+                                <th class="product-action">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                int i = 0;
+                                <tr>
+                                    <td class="product-quantity"><a href="#">@item.Id</a></td>
+                                    <td class="product-name" style="text-align: left;">
+                                        @foreach (var order in item.OrderItems)
+                                        {
+                                            i++;
+                                            <strong>@i. @order.Book.Name</strong>
+                                            <br />
+                                        }
+                                    </td>
+                                    <td class="product-price">
+                                        <span class="amount">@item.OrderItems.Select(b => b.Book.Price * b.Amount).Sum().ToString("c")</span>
+                                    </td>
+                                    <td class="product-price">
+                                        <a asp-action="OrderConfirmed" asp-route-orderid="@item.Id">View Order</a>
+                                    </td>
+                                    <td>
+                                        <a asp-action="DeleteOrder" asp-route-id="@item.Id" class="btn btn-outline-danger"><i class="la la-trash"> Delete</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <h6>Feedbacks</h6>
+                                        <ul>
+                                            @foreach (var feedback in item.Feedbacks)
+                                            {
+                                                <li>@feedback.Content (by @feedback.User.UserName on @feedback.CreatedDate.ToString("yyyy-MM-dd"))</li>
+                                            }
+                                        </ul>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <form asp-action="AddFeedback" method="post">
+                                                <input type="hidden" name="OrderId" value="@item.Id" />
+                                                <input type="hidden" name="BookId" value="@item.OrderItems.First().BookId" /> <!-- Assuming feedback is for the first book in the order -->
+                                                <div class="form-group">
+                                                    <label for="Content">Feedback</label>
+                                                    <textarea class="form-control" name="Content" required></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" value="Submit" class="btn btn-primary" />
+                                                </div>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <p>Please <a asp-controller="Account" asp-action="Login">login</a> to leave feedback.</p>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

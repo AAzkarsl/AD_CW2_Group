@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ebook_cw
+build_property.RootNamespace = ebook_cw
+build_property.ProjectDir = F:\New folder (4)\AD_CW_Group\App\EbookLtd-main\EbookLtd-main\ebook_cw\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\New folder (4)\AD_CW_Group\App\EbookLtd-main\EbookLtd-main\ebook_cw
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Account/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/AdminOrders/orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5PcmRlcnNcb3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/AdminUser/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Vc2VyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Books/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Books/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Books/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Dashboard/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Home/BookView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCb29rVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Home/contactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Home/shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzaG9wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXGNhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXGNoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/checkoutLogged.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXGNoZWNrb3V0TG9nZ2VkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/loggedform.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXGxvZ2dlZGZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/myOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXG15T3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/orderConfirmed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXG9yZGVyQ29uZmlybWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Orders/orderform.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXG9yZGVyZm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Publishers/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xjcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Publishers/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Publishers/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/Admin/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/Admin/_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/Components/ShoppingCartSummary/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2hvcHBpbmdDYXJ0U3VtbWFyeVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/Front/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZyb250XEhlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/Front/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZyb250XF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Writters/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV3JpdHRlcnNcY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Writters/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV3JpdHRlcnNcZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Writters/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV3JpdHRlcnNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/New folder (4)/AD_CW_Group/App/EbookLtd-main/EbookLtd-main/ebook_cw/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ip6zaks6lp

@@ -1,0 +1,90 @@
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<ApplicationUser> UserManager;
+<header id="wn__header" class="header__area sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
+						<div class="logo logo-ebook">
+							<a asp-route="Home">
+						<img src="~/images/logo/ebook.lk-logo.svg" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li class="drop with--one--item"><a asp-route="Home">Home</a>
+								</li>
+								<li class="drop"><a asp-route="Shop">All Books</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
+						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+							<li class="shopcart"><a asp-controller="Orders" asp-action="Index"><span class="product_qun"> @await Component.InvokeAsync("ShoppingCartSummary") </span></a>
+								
+							</li>
+							<li class="setting__bar__icon"><a class="setting__active" href="#"> </a>
+								<div class="searchbar__content setting__block">
+									<div class="content-inner">
+										
+										<div class="switcher-currency">
+											<strong class="label switcher-label">
+												<span>My Account</span>
+											</strong>
+											<div class="switcher-options">
+												<div class="switcher-currency-trigger">
+													<div class="setting__menu">
+														@if(User.Identity.IsAuthenticated)
+														{
+															@if (User.IsInRole("Admin"))
+															{
+																<span><a asp-action="Index" asp-controller="Dashboard">Admin Dashboard</a></span>
+																<span><a onclick="document.getElementById('formLogout').submit();">Sign Out</a></span>
+																<form id="formLogout" asp-controller="Account" asp-action="Logout" method="post"></form>
+															}
+															else{
+															<span><a asp-action="MyOrders" asp-controller="Orders">My Orders</a></span>
+															<span><a onclick="document.getElementById('formLogout').submit();">Sign Out</a></span>
+															<form id="formLogout" asp-controller="Account" asp-action="Logout" method="post"></form>
+															}
+														}
+														else{
+															<span><a asp-controller="Account" asp-action="Login">Sign In</a></span>
+															@* <span><a href="#">Create An Account</a></span> *@
+														}
+														
+
+														
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a asp-route="Home">Home</a></li>
+								
+								<li><a asp-route="Shop">Shop</a></li>
+								
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+			</div>		
+		</header>
+		<!-- //Header -->
+		

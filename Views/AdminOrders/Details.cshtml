@@ -1,0 +1,61 @@
+﻿@model ebook_cw.Models.Order
+
+@{
+    ViewData["Title"] = "Order Details";
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-content collapse show">
+                <div class="card-body">
+<h2>Order Details - @Model.Id</h2>
+
+<div>
+    <h4>Order Date: @Model.CreatedDate.ToString("yyyy-MM-dd")</h4>
+</div>
+
+<h3>Order Items</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr>
+                <td>@item.Book.Name</td>
+                <td>@item.Amount</td>
+                <td>@item.Price.ToString("c")</td>
+                <td>@(item.Price * item.Amount)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Feedbacks</h3>
+@if (Model.Feedbacks.Any())
+{
+    <ul>
+        @foreach (var feedback in Model.Feedbacks)
+        {
+            <li>@feedback.Content (by @feedback.User?.UserName on @feedback.CreatedDate.ToString("yyyy-MM-dd"))</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No feedback available for this order.</p>
+}
+</div>
+</div>
+</div>
+</div>
+</div>

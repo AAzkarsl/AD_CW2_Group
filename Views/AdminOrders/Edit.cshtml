@@ -1,0 +1,44 @@
+﻿@model ebook_cw.Models.Order
+
+@{
+    ViewData["Title"] = "Edit Order";
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <h1>Edit Order</h1>
+
+            <form asp-action="Edit">
+
+                <div class="form-group col-5">
+                    <label asp-for="OrderStatus" class="control-label"></label>
+                    <select asp-for="OrderStatus" class="form-control">
+                        <option value="Processing">Processing</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Cancelled">Cancelled</option>
+                        <option value="Returned">Returned</option>
+                    </select>
+                    <span asp-validation-for="OrderStatus" class="text-danger"></span>
+                </div>
+
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+
+            <div>
+                <a asp-action="Orders">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

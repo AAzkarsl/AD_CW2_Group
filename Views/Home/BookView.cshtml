@@ -1,0 +1,104 @@
+@model Book
+@using ebook_cw.Data
+@{
+    ViewData["Title"] = @Model.Name + " | EBook.lk";
+    Layout = "~/Views/Shared/Front/_Layout.cshtml";
+}
+<style>
+    .mainmenu__nav .meninmenu li a {
+        color: #000;
+    }
+
+    .blureffect {
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+    }
+</style>
+
+<div class="ht__bradcaump__area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner">
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" asp-route="Home">Home</a>
+                        <span class="brd-separetor">>></span>
+                        <span class="breadcrumb_item active">Book</span>
+                        <span class="brd-separetor">>></span>
+                        <span class="breadcrumb_item active">@Model.Name</span>
+                    </nav>
+                </div>
+                <hr style="margin-top:10px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="maincontent bg--white pt--20 pb--55">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-12">
+                <div class="wn__single__product">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="wn__fotorama__wrapper">
+                                <div class="fotorama wn__fotorama__action" data-nav="thumbs">
+                                    <a href="@Model.Image"><img src="@Model.Image" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="product__info__main">
+                                <h1>@Model.Name</h1>
+                                <div class="price-box">
+                                    <span>Rs @Model.Price.00</span>
+                                </div>
+                                <div class="product__overview">
+                                    <p>@Model.Description</p>
+                                </div>
+                                <form asp-action="AddToShoppingCart" asp-controller="Orders" method="get">
+                                    <div class="box-tocart d-flex">
+                                        <span>Qty</span>
+                                        <input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number" required>
+                                        <input type="hidden" name="id" value="@Model.Id">
+                                        <div class="addtocart__actions">
+                                            <button class="tocart" type="submit" title="Add to Cart">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__info__detailed">
+                    <div class="pro_details_nav nav justify-content-start" role="tablist">
+                        <a class="nav-item nav-link active" data-toggle="tab" href="#nav-details" role="tab">Writer(s)</a>
+                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">Publisher</a>
+                    </div>
+                    <div class="tab__container">
+                        <div class="pro__tab_label tab-pane fade show active" id="nav-details" role="tabpanel">
+                            <div class="description__attribute">
+                                @foreach (var writer in @Model.Writter_Books)
+                                {
+                                    <img src="@writer.Writter.Image" style="max-width: 200px; margin-right:20px;" ALIGN="left" alt="@writer.Writter.Name">
+                                    <p style="font-size: 25px; padding-top:5px;">@writer.Writter.Name</p>
+                                    <p>@writer.Writter.Bio</p>
+                                    <br clear="left" />
+                                    <p></p>
+                                    <hr style="margin-bottom: 20px;" />
+                                }
+                            </div>
+                        </div>
+                        <div class="pro__tab_label tab-pane fade" id="nav-review" role="tabpanel">
+                            <div class="review__attribute">
+                                <h2>@Model.Publisher.Name</h2>
+                                <p>@Model.Publisher.Bio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,49 @@
+ <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+    <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true" data-img="">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">       
+          <li class="nav-item mr-auto"><a class="navbar-brand" href="~/"><img class="brand-logo" alt="Chameleon admin logo" src="/theme-assets/images/logo/logo.svg"/>
+              <h3 class="brand-text">Ebook.lk</h3></a></li>
+          <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+        </ul>
+      </div>
+      <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+          <li class='@ViewData["Dashboard"]'><a href='@Url.RouteUrl("dashboard")'><i class="ft-home"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+          </li>
+          <li class='@ViewData["Writers"] nav-item'><a href='@Url.RouteUrl("writers")'><i class="la la-pencil"></i><span class="menu-title" data-i18n="">Writers</span></a>
+          </li>
+          <li class='@ViewData["Publishers"] nav-item'><a href='@Url.RouteUrl("publisher")'><i class="la la-laptop"></i><span class="menu-title" data-i18n="">Publishers</span></a>
+          </li>
+          <li class='@ViewData["Books"] nav-item'><a href='@Url.RouteUrl("books")'><i class="la la-book"></i><span class="menu-title" data-i18n="">Books</span></a>
+          </li>
+          <li class='@ViewData["Orders"] nav-item'><a asp-action="Orders" asp-controller="AdminOrders"><i class="la la-cart-plus"></i><span class="menu-title" data-i18n="">Orders</span></a>
+          </li>
+          <li class='@ViewData["Users"] nav-item'><a asp-action="Users" asp-controller="AdminUser"><i class="la la-user"></i><span class="menu-title" data-i18n="">Users</span></a>
+          </li>
+            <li class="nav-item has-sub">
+                <a href="#"><i class="la la-file-text-o"></i><span class="menu-title" data-i18n="">Generate Report</span></a>
+                <ul class="menu-content">
+                    <li class="">
+                        <a class="menu-item" asp-action="BookReport" asp-controller="Books">Book Sale Report</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" asp-action="OrderReport" asp-controller="Orders">Order Report</a>
+                    </li>
+                </ul>
+            </li>
+
+@*       
+          <li class=" nav-item"><a href="https://themeselection.com/demo/chameleon-admin-template/documentation"><i class="ft-book"></i><span class="menu-title" data-i18n="">Documentation</span></a>
+          </li> *@
+          
+        </ul>
+
+
+      </div>
+      
+      <div class="navigation-background"></div>
+    </div>
+

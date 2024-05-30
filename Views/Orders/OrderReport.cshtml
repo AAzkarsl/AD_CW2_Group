@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ebook_cw.Data.ViewModels.OrderReportViewModel>
+@using System.Globalization
+
+
+@{
+    ViewData["Title"] = "Orders Report";
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+    var cultureInfo = new CultureInfo("si-LK");
+}
+
+<style>
+    #logoImage {
+        width: 150px;
+    }
+
+    #ReportContent a {
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a><i>Orders Report</i></a></li>
+                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                        <li><i id="exportPDF" class="la la-print"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content collapse show">
+                <div class="card-body" id="ReportContent">
+                    <header class="clearfix pb--50" style="padding: 30px 0;">
+                        <h2>Orders Report</h2>
+                        <div id="logo" class="pb--30 logo-ebook">
+                            <img id="logoImage" src="~/images/logo/ebook.lk-logo.svg">
+                        </div>
+                        <div id="company" class="clearfix">
+                            <div><b>EBook.lk</b></div>
+                            <div>No. 3</div>
+                            <div>De Fonseka Place, Colombo 3</div>
+                            <div>+94766695474</div>
+                            <div><a href="mailto:info@ebook_cw.lk">info@ebook_cw.lk</a></div>
+                        </div>
+                    </header>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="service">Order ID</th>
+                                    <th class="desc">User</th>
+                                    <th>Email</th>
+                                    <th>Total Amount</th>
+                                    <th>Order Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var order in Model)
+                                {
+                                    <tr>
+                                        <td class="service">@order.OrderId</td>
+                                        <td class="desc">@order.UserName</td>
+                                        <td class="desc">@order.Email</td>
+                                        <td class="unit">@order.TotalAmount.ToString("c", cultureInfo)</td>
+                                        <td class="qty">@order.CreatedDate.ToString("yyyy-MM-dd")</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Book Name</th>
+                                                        <th>Amount</th>
+                                                        <th>Price</th>
+                                                    </tr>
+                                                </tbody>
+                                                <tbody>
+                                                    @foreach (var item in order.OrderItems)
+                                                    {
+                                                        <tr>
+                                                            <td>@item.BookName</td>
+                                                            <td>@item.Amount</td>
+                                                            <td>@item.Price.ToString("c", cultureInfo)</td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

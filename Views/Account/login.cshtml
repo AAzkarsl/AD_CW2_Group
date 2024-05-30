@@ -1,0 +1,42 @@
+@using ebook_cw.Data.ViewModels
+@model LoginVm
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/Front/_Layout.cshtml";
+}
+        <section class="my_account_area pt--30 pb--55 bg--white">
+			<div class="container">
+				<div class="row">
+					<div class="offset-lg-3 col-lg-6 col-12">
+						<div class="my__account__wrapper">
+							<h3 class="account__title text-center">EBOOK Sign In</h3>
+							<form asp-action="LoginCheck" method="POST">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+								<div class="account__form">
+									<div class="input__box">
+										<label>Email address <span>*</span></label>
+										<input type="email" asp-for="EmailAddress">
+                                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+									</div>
+									<div class="input__box">
+										<label>Password<span>*</span></label>
+										<input asp-for="Password">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+									</div>
+                                    <div class="input__box">
+                                        @if(TempData["Error"] != null)
+                                        {
+                                            <span class="text-danger">@TempData["Error"]</span>
+                                        }
+                                    </div>
+									<div class="form__btn mt--30">
+										<button type="submit" style="width: 100%;">Login</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
